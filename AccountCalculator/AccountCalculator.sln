@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountCalculator", "AccountCalculator.csproj", "{AE0F7899-8B34-4B99-9CA4-7702EB3D6E55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE0F7899-8B34-4B99-9CA4-7702EB3D6E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0F7899-8B34-4B99-9CA4-7702EB3D6E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0F7899-8B34-4B99-9CA4-7702EB3D6E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0F7899-8B34-4B99-9CA4-7702EB3D6E55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2E185E7-363A-4CB6-ACF8-AC6C01B03D05}
+	EndGlobalSection
+EndGlobal
