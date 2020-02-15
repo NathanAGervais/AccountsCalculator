@@ -1,8 +1,8 @@
 using AccountCalculator.Options;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,9 +25,8 @@ namespace AccountCalculator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             services.AddMediatR(typeof(Startup));
-
+            services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
             services.AddSwaggerGen(x =>
             {
                 x.SwaggerDoc("v1", new OpenApiInfo { Title = "Account Calculator", Version= "v1" });
@@ -42,6 +41,10 @@ namespace AccountCalculator
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
             var swaggerOptions = new SwaggerOptions();
             Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
 
@@ -55,15 +58,6 @@ namespace AccountCalculator
                 option.SwaggerEndpoint(swaggerOptions.UiEndpoint, swaggerOptions.Description);
             });
 
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
         }
     }
 }
