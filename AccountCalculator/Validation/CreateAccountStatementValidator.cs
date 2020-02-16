@@ -1,6 +1,5 @@
 ﻿using AccountCalculator.Commands;
 using FluentValidation;
-using System;
 
 namespace AccountCalculator.Validation
 {

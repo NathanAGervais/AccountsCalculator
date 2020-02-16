@@ -27,12 +27,5 @@ namespace AccountCalculator.Tests
         {
             sut.ShouldNotHaveValidationErrorFor(s => s.CreditDebitIndicator, dto);
         }
-
-        [Test, AutoData]
-        public void TransactionDtoValidator_HasNoValidationErrors_WhenCreditDebitIndicatorIsInvalid(TransactionDtoValidator sut)
-        {
-
-            sut.ShouldHaveValidationErrorFor(s => s.CreditDebitIndicator, new TransactionDto());
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using AccountCalculator.Domain.Enum;
 
 namespace AccountCalculator.Dtos
 {
@@ -9,6 +10,6 @@ namespace AccountCalculator.Dtos
         public string Status { get; set; }
         public DateTime BookingDate { get; set; }
         public string MerchantDetails { get; set; }
-        public string CreditDebitIndicator { get; set; }
+        public CreditDebitIndicator CreditDebitIndicator { get; set; }
     }
 }

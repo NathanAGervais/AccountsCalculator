@@ -1,4 +1,3 @@
-using AccountCalculator.Mappings;
 using AccountCalculator.Options;
 using AccountCalculator.Queries;
 using AccountCalculator.Repositories;
