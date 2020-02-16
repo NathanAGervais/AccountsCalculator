@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountCalculator", "AccountCalculator.csproj", "{AE0F7899-8B34-4B99-9CA4-7702EB3D6E55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountCalculator.Tests", "..\AccountCalculator.Tests\AccountCalculator.Tests.csproj", "{8ED47A57-936D-4150-8583-2A21EC15C2E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountCalculator.Tests", "..\AccountCalculator.Tests\AccountCalculator.Tests.csproj", "{8ED47A57-936D-4150-8583-2A21EC15C2E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

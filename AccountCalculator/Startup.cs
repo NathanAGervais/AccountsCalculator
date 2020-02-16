@@ -1,4 +1,8 @@
+using AccountCalculator.Mappings;
 using AccountCalculator.Options;
+using AccountCalculator.Queries;
+using AccountCalculator.Repositories;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -26,11 +30,15 @@ namespace AccountCalculator
         {
             services.AddControllers();
             services.AddMediatR(typeof(Startup));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
             services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
             services.AddSwaggerGen(x =>
             {
                 x.SwaggerDoc("v1", new OpenApiInfo { Title = "Account Calculator", Version= "v1" });
             });
+
+            services.AddScoped<IStatementsRepository, StatementsRepository>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

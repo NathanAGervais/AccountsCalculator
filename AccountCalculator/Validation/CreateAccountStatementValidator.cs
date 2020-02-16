@@ -4,9 +4,9 @@ using System;
 
 namespace AccountCalculator.Validation
 {
-    public class CreateEndOfDayBalanceCalculationCommandValidator : AbstractValidator<CreateEndOfDaysBalanceCalculationCommand>
+    public class CreateAccountStatementValidator : AbstractValidator<CreateAccountStatementRequest>
     {
-        public CreateEndOfDayBalanceCalculationCommandValidator()
+        public CreateAccountStatementValidator()
         {
             RuleFor(x => x.AccountId).NotEmpty();
             RuleFor(x => x.Transactions).NotEmpty();
